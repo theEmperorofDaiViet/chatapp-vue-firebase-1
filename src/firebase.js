@@ -25,7 +25,7 @@ export function useAuth() {
 
     const signIn = async () => {
         const googleProvider = new firebase.auth.GoogleAuthProvider();
-        await auth.signInWithPopup(googleProvider);
+        await auth.signInWithPopup(googleProvider).catch((err) => console.log(err));
     };
 
     const signOut = () => {
@@ -44,7 +44,7 @@ export function useChat() {
     const messages = ref([]);
     const unsubscribe = messagesQuery.onSnapshot(snapshot => {
         messages.value = snapshot.docs.map(doc => {
-            return { id: doc.id, ...doc.data()}
+            return { id: doc.id, ...doc.data({ serverTimestamps: 'estimate' })}
         }).reverse()
     });
     onUnmounted(unsubscribe);

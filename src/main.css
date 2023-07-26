@@ -66,8 +66,17 @@ nav button {
   @apply w-full;
 }
 
-.message span {
+.message .they {
+  @apply flow-root;
   @apply ml-11;
+  @apply mr-24;
+  @apply text-xs;
+  @apply text-gray-500;
+}
+
+.message .me {
+  @apply flow-root;
+  @apply ml-24;
   @apply text-xs;
   @apply text-gray-500;
 }
