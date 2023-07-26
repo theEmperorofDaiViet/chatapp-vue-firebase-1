@@ -1,8 +1,8 @@
 <template>
     <div class="container-sm mt-20">
         <div class="mx-5">
-            <message v-for="{ id, text, userPhotoURL, userName, userId } in messages"
-                :key="id" :name="userName" :photo-url="userPhotoURL" :sender="userId === user?.uid">
+            <message v-for="{ id, text, userPhotoURL, userName, userId, createdAt } in messages"
+                :key="id" :name="userName" :photo-url="userPhotoURL" :sender="userId === user?.uid" :created-at="createdAt">
                 {{ text }}
             </message>
 
