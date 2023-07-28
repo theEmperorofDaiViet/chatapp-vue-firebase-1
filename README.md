@@ -59,7 +59,7 @@ Firebase configuration:
 - Open [Firebase](https://firebase.google.com/) and create a new project.
 - Go to the Authentication section and enable Google sign-in.
 - Then switch to the Cloud Firestore section and create a new database in test mode.
-- Finally, click on "Add Firebase to your app" in the main page, register the app, copy the configuration details and paste in the [firebase.js](./src/firebase.js) file.
+- Finally, click on "Add Firebase to your web app" in the main page, register the app, copy the configuration details and paste them in the [firebase.js](./src/firebase.js) file.
 
 ## Project setup
 ```
@@ -87,7 +87,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 # Key Features
-In our app, a user can add, delete, and edit day to day events within a week. Each
+In our app, a user can chat in realtime with everyone else (like a public group chat), with the following features:
 - Authentication using Google
 - Realtime data using Firestore
 - Display timestamp of each message
